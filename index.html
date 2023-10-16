@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Rummy Lobby</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/Fontawsome/css/all.min.css" />
+</head>
+
+<body>
+	<!-- ------------------Sidebar Left------------------ -->
+
+	<div class="sidebar position-fixed top-0 bottom-0 start-0">
+		<div class="w-100">
+			<ul class="w-100 d-table sidebar-page">
+				<li class="w-100">
+					<a href="#" class="d-block">
+						<i class="fa-solid fa-check"></i>
+						<span class="d-block">Projects</span></a>
+				</li>
+				<li class="w-100">
+					<a href="#" class="d-block">
+						<img src="assets/img/growth.png" />
+						<span class="d-block">Analytics</span></a>
+				</li>
+			</ul>
+		</div>
+		<div class="w-100 position-absolute bottom-0">
+			<ul class="w-100 d-table sidebar-page">
+				<li class="w-100">
+					<a href="#" class="d-block">
+						<i class="fa-solid fa-check"></i>
+						<span class="d-block">Recent Items</span></a>
+				</li>
+				<li class="w-100">
+					<a href="#" class="d-block">
+						<img src="assets/img/growth.png" />
+						<span class="d-block">Favorites</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- ------------------Sidebar Left End!------------------ -->
+
+	<!-- Header Panel -->
+	<div class="headerpanel w-100 d-flex justify-content-between position-fixed top-0 start-0">
+		<div class="d-flex align-items-center">
+			<button class="btn menubtn text-center">
+				<span></span>
+				<span class="position-relative"></span>
+				<span class="mb-0"></span>
+			</button>
+			  <ul class="nav headernavbar">
+        <li>
+          <a href="displaymilestone.html">Home</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Feed</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Discuss</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Report</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Calendar</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Projects</a>
+        </li>
+        <li class="hidden">
+          <a href="#" class="d-sm-none ">Work Overview</a>
+        </li>
+        <li class="d-lg-none d-md-block">
+          <button class="btn" onclick="myFunctions()"><i class="fa-solid fa-ellipsis text-white"></i></button>
+          <div id="myDIV">
+            <a href="#">Feed</a>
+            <a href="#">Discuss</a>
+            <a href="#">Report</a>
+            <a href="#">Calendar</a>
+            <a href="#">Calendar</a>
+            <a href="#">Projects</a>
+            <a href="#">Work Overview</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">PRD:MGP2.0</a>
+        </li>
+      </ul>
+		</div>
+		<div class="">
+			<ul class="header-icon p-0 d-flex align-items-center">
+				<li>
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</li>
+				<li>
+					<i class="fa-solid fa-plus"></i>
+				</li>
+				<li>
+					<i class="fa-solid fa-clock"></i>
+				</li>
+				<li class="position-relative">
+					<i class="fa-sharp fa-solid fa-bell"></i>
+					<span class="position-absolute notifications-count">18</span>
+				</li>
+				<li>
+					<i class="fa-solid fa-gear"></i>
+				</li>
+				<li class="m-0">
+					<img class="userimg rounded-pill" src="assets/img/user-thumbnail.png" alt="User Thumbnail" />
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- Header Panel End! -->
+
+	<!-- Right Panel -->
+	<div class="container-fluid main-panel">
+		<div class="ds-container">
+			<div class="ds-sticky">
+				<div class="das-header">
+					<div class="w-100 d-flex justify-content-between align-items-center">
+						<div class="w-auto">
+							<h1 class="ownername text-start fs-5 fw-bold">
+								Welcome Mobzway
+							</h1>
+							<p class="companyname text-start">
+								<span>Company:</span> Mobzway Technologies LLP
+							</p>
+						</div>
+						<div class="w-auto">
+							<button class="btn">
+								<i class="fa-solid fa-ellipsis"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="row dashboard-summary-container justify-content-between align-items-center">
+					<div class="col-xl-2 col-md-4 dashboard-box">
+						<div class="das-title">
+							<h6 class="mb-0">1</h6>
+							<span>open Task</span>
+						</div>
+						<div class="das-icon">
+							<i class="fa-solid fa-calendar-check"></i>
+						</div>
+					</div>
+					<div class="col-xl-2 col-md-4 dashboard-box">
+						<div class="das-title">
+							<h6 class="mb-0">1</h6>
+							<span>closed Task</span>
+						</div>
+						<div class="das-icon">
+							<i class="fa-solid fa-calendar-check"></i>
+						</div>
+					</div>
+					<div class="col-xl-2 col-md-4 dashboard-box bugs-red">
+						<div class="das-title">
+							<h6 class="mb-0">1</h6>
+							<span>Open Bugs</span>
+						</div>
+						<div class="das-icon">
+							<i class="fa-solid fa-spider"></i>
+						</div>
+					</div>
+					<div class="col-xl-2 col-md-4 dashboard-box bugs-red">
+						<div class="das-title">
+							<h6 class="mb-0">1</h6>
+							<span>Closed bugs</span>
+						</div>
+						<div class="das-icon">
+							<i class="fa-solid fa-spider"></i>
+						</div>
+					</div>
+					<div class="col-xl-2 col-md-4 dashboard-box milestone">
+						<div class="das-title">
+							<h6 class="mb-0">0</h6>
+							<span>Open Milestone</span>
+						</div>
+						<div class="das-icon">
+							<img class="mission-flag" src="assets/img/mission.png" alt="">
+						</div>
+					</div>
+					<div class="col-xl-2 col-md-4 dashboard-box milestone">
+						<div class="das-title">
+							<h6 class="mb-0">0</h6>
+							<span>Closed Milestone</span>
+						</div>
+						<div class="das-icon">
+							<img class="mission-flag" src="assets/img/mission.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row dashboard-content mt-3">
+			<div class="col-lg-5 dash_box mr-2">
+				<div class="dash_innerbox">
+					<div class="dash-hdr">
+						<span class="dots-icon"><b>::</b> My Bugs</span>
+						<div class="handle">
+							<div class="dash-hdr-container">
+								<div class="dash-icon">
+									<span class="repeat"><i class="fa-solid fa-rotate-right"></i></span>
+									<span class="view mx-2">View more</span>
+									<span class="cross"><i class="fa-solid fa-xmark"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="empty-box">
+						<div class="dash-img">
+							<img src="assets/img/spider.png" alt="">
+						</div>
+						<div class="text">
+							<p class="p-4 fw-bold text-dark">No bugs assigned you</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 dash_box">
+				<div class="dash_innerbox">
+					<div class="dash-hdr">
+						<span class="dots-icon"><b>::</b> My Bugs</span>
+						<div class="handle">
+							<div class="dash-hdr-container">
+								<div class="dash-icon">
+									<span class="repeat"><i class="fa-solid fa-rotate-right"></i></span>
+									<span class="view mx-2">View more</span>
+									<span class="cross"><i class="fa-solid fa-xmark"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="empty-box">
+						<div class="dash-img">
+							<img src="assets/img/open-folder.png" alt="">
+						</div>
+						<div class="text">
+							<p class="p-4 fw-bold text-dark">No bugs assigned you</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 dash_box  mt-2">
+				<div class="dash_innerbox">
+					<div class="dash-hdr">
+						<span class="dots-icon"><b>::</b> My Bugs</span>
+						<div class="handle">
+							<div class="dash-hdr-container">
+								<div class="dash-icon">
+									<span class="repeat"><i class="fa-solid fa-rotate-right"></i></span>
+									<span class="view mx-2">View more</span>
+									<span class="cross"><i class="fa-solid fa-xmark"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="empty-box">
+						<div class="dash-img">
+							<img src="assets/img/spider.png" alt="">
+						</div>
+						<div class="text">
+							<p class="p-4 fw-bold text-dark">No bugs assigned you</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 dash_box mt-2">
+				<div class="dash_innerbox">
+					<div class="dash-hdr">
+						<span class="dots-icon"><b>::</b> My Bugs</span>
+						<div class="handle">
+							<div class="dash-hdr-container">
+								<div class="dash-icon">
+									<span class="repeat"><i class="fa-solid fa-rotate-right"></i></span>
+									<span class="view mx-2">View more</span>
+									<span class="cross"><i class="fa-solid fa-xmark"></i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="empty-box">
+						<div class="dash-img">
+							<img src="assets/img/open-folder.png" alt="">
+						</div>
+						<div class="text">
+							<p class="p-4 fw-bold text-dark">No bugs assigned you</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Right Panel End! -->
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script>
+		$(".sidebar-page li").click(function () {
+			$(this).addClass("active").siblings().removeClass("active");
+		});
+		$(".menubtn").click(function () {
+			$(".sidebar").toggleClass("sidebar-close");
+			$(this).toggleClass("menubtn-open");
+		});
+	</script>
+	<script>
+    function myFunctions() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>

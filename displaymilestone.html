@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/Fontawsome/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-----Select2 CSS/JS------->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+    <!--------------------Sidebar Left-------------------->
+    <div class="sidebar position-fixed top-0 bottom-0 start-0">
+        <div class="w-100">
+            <ul class="w-100 d-table sidebar-page">
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="d-block">Projects</span>
+                    </a>
+                </li>
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <img src="assets/img/growth.png" />
+                        <span class="d-block">Analytics</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 position-absolute bottom-0">
+            <ul class="w-100 d-table sidebar-page">
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="d-block">Recent Items</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <img src="assets/img/growth.png" />
+                        <span class="d-block">Favorites</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--------------------Sidebar Left End!-------------------->
+    <!-- Header Panel -->
+    <div class="headerpanel w-100 d-flex justify-content-between position-fixed top-0 start-0">
+        <div class="d-flex align-items-center">
+            <button class="btn menubtn text-center">
+                <span></span>
+                <span class="position-relative"></span>
+                <span class="mb-0"></span>
+            </button>
+            <ul class="nav headernavbar">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Feed</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Discuss</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Report</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Calendar</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Projects</a>
+                </li>
+                <li class="hidden">
+                    <a href="#" class="d-sm-none ">Work Overview</a>
+                </li>
+                <li class="d-lg-none d-md-block">
+                    <button class="btn" onclick="myFunctions()"><i class="fa-solid fa-ellipsis text-white"></i></button>
+                    <div id="myDIV">
+                        <a href="#">Feed</a>
+                        <a href="#">Discuss</a>
+                        <a href="#">Report</a>
+                        <a href="#">Calendar</a>
+                        <a href="#">Calendar</a>
+                        <a href="#">Projects</a>
+                        <a href="#">Work Overview</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">PRD:MGP2.0</a>
+                </li>
+            </ul>
+        </div>
+        <div class="">
+            <ul class="header-icon p-0 d-flex align-items-center">
+                <li>
+                    <button type="button" class="btn search-glass text-white p-0 pb-1" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+                <li class="drowpPlus">
+                    <div class="dropdown">
+                        <button onclick="myFunction2()" class="dropbtn btn"
+                            style=" font-size: 27px; padding: 0; font-size: 26px; color: #fff; margin-bottom: 3px;">+</button>
+                        <div class="drowpdownplus dropdown-content" id="myDropdown2">
+                            <a href="#">+ Task</a>
+                            <a href="#">+ Task List</a>
+                            <a href="#">+ Bugs</a>
+                            <a href="#">+ Milestone/a>
+                                <a href="#">+ Timesheets</a>
+                                <a href="#">+ Fourms</a>
+                                <a href="#">+ Event</a>
+                                <a href="#">+ Document</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                </li>
+                <li class="position-relative">
+                    <button class="btn px-0 text-white" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight3" aria-controls="offcanvasRight"><i
+                            class="fa-sharp fa-solid fa-bell"></i></button>
+                    <span class="position-absolute notifications-count">18</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                </li>
+                <li class="m-0">
+                    <button class="btn p-0 pb-2" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight"><img
+                            class="userimg rounded-pill" src="assets/img/user-thumbnail.png" alt="User Thumbnail" />
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Header Panel End! -->
+    <!-- Main-panel -->
+
+    <div class="container-fluid main-panel">
+        <div class="ds-container">
+
+            <div class="taskbar">
+                <div class="tasknavbar">
+                    <ul type="none" class="nav">
+                        <li class="list-item active"><a href="#">Dashboard</a></li>
+                        <li class="list-item active"><a href="#">Task</a></li>
+                        <li class="list-item active"><a href="index.html">Bugs</a></li>
+                        <li class="list-item active"><a href="displaymilestone.html">Milestone</a></li>
+                        <li class="list-item active"><a href="displaydocuments.html">Documents</a></li>
+                        <li class="list-item active"><a href="#">Timesheet</a></li>
+                        <li class="list-item active"><a href="#">Fourms</a></li>
+                        <li class="list-item active"><a href="#">Pages</a></li>
+                        <li>
+                            <a href="#" class="ellipsis"><i class="fa-solid fa-ellipsis"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="das-list d-flex justify-content-between align-items-center px-2">
+            <div class="right-action">
+                <div class="right-action-text">
+                    <span>All Milestones<i class="fa-sharp fa-solid fa-caret-down"></i></span>
+                    <div class="drowp">
+                        <ul type="none" class="p-1">
+                            <li>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="search" placeholder="search">
+                            </li>
+                            <li>
+                                <button class="accordion d-flex justify-content-between align-items-center">
+                                    <p class="text-dark"><b>Predefind Views</b></p>
+                                    <p class="text-dark"><i class="fa-sharp fa-solid fa-caret-down"></i></p>
+                                </button>
+                                <div class="panel">
+                                    <p class="accordion-text">All Milestone</p>
+                                    <p class="accordion-text">All Milestone</p>
+                                    <p class="accordion-text">All Milestone</p>
+                                    <p class="accordion-text">All Milestone</p>
+                                    <p class="accordion-text">All Milestone</p>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="accordion d-flex justify-content-between align-items-center">
+                                    <p class="text-dark"><b>Predefind Views</b></p>
+                                    <p class="text-dark"><i class="fa-sharp fa-solid fa-caret-down"></i></p>
+                                </button>
+                                <div class="panel">
+                                    <p>Coming Soon</p>
+                                    <p>Coming Soon</p>
+                                    <p>Coming Soon</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="left-action">
+                <div class="left-action-text">
+                    <ul type="none" class="d-flex align-items-center justify-content-evenly gap-3"
+                        style="margin-right: 50px;">
+                        <!-- <li>
+                            <i class="fa-solid fa-bars"></i>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn btn">Plain<i
+                                        class="fa-sharp fa-solid fa-caret-down"></i></button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <a href="#"><i class="fa-solid fa-bars-staggered fa-rotate-90"></i> Plain</a>
+                                    <a href="#"><i class="fa-solid fa-bars"></i> Classic</a>
+                                    <a href="#"><i class="fa-solid fa-bars-staggered fa-rotate-90"></i> Kanban</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <button class="btn submit-bugs">Submit Bugs</button>
+                        </li> -->
+                        <li class="das-list-icon">
+                            <button class="btn" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
+                                    class="fa-solid fa-filter  mx-2"></i></button>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn btn"
+                                    style="font-size: 27px; padding: 0; margin-top: -17px;">...</button>
+                                <div id="myDropdown" class="dropdown-content ellipsis-content" style="width: 200px;">
+                                    <a href="#"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp; Export
+                                        Milestones</a>
+                                    <a href="#"><i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp; Help</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Table-start -->
+        <div class="das-table">
+            <div class="das-table-hdr">
+                <table>
+                    <thead class="table-header border-bottom">
+                        <tr class="mslinehdr">
+                            <th class="mile-txt" style="width: 150px; min-width: 150px; max-width: 150px">
+                                <i class="fa-solid fa-gear"></i>
+                                <span class="mx-2">Bugs</span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row"></span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row">Reporter</span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row">Create</span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row">Status</span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row">Tages</span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row">Assosiate</span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row">Assignment</span>
+                            </th>
+                            <th class="th-text">
+                                <span class="text-row">End-date</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="thbody">
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn">Assigned(Response)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn res">Resolved(Tooooooo)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn">Assigned(Response)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn res">Resolved(Tooooooo)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn">Assigned(Response)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn res">Resolved(Tooooooo)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn">Assigned(Response)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn res">Resolved(Tooooooo)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn">Assigned(Response)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer
+                                app-uploaded
+                                video size not show proper in mb</td>
+                            <td></td>
+                            <td class="Reporter-text">
+                                <span>Mohit verma</span>
+                            </td>
+                            <td class="date-start">
+                                <span>26-03-2023</span>
+                            </td>
+                            <td class="status-text">
+                                <button class="status-btn res">Resolved(Tooooooo)</button>
+                            </td>
+                            <td class="tages-text">
+                                <span>-</span>
+                            </td>
+                            <td class="Assote-text">
+                                <span>Baricata</span>
+                            </td>
+                            <td class="assign-text">
+                                <span>Ritanshu Patwa</span>
+                            </td>
+                            <td class="end-date">
+                                <span>30-04-2023</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Table-End -->
+    </div>
+    <!-- Main Panel End -->
+    <!-- Filter btn offcanvas -->
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header d-flex justify-content-between">
+            <h5 id="offcanvasRightLabel"><b>Filter</b></h5>
+            <button class="btn reset">
+                <h6>reset</h6>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-accordion">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flush-headingOne">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Title
+                                <div class="selectoptionone px-3">
+                                    <select id="search" name="search" style="width:130px;">
+                                        <option value="containes">Contains</option>
+                                        <option value="is">Is</option>
+                                        <option value="isnot">Is not</option>
+                                        <option value="does">Doesn't contain</option>
+                                        <option value="starts">Starts With</option>
+                                        <option value="starts">Ends With</option>
+                                    </select>
+                                </div>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"><input type="text" class="form-control inputone"></div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flush-headingTwo">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Flag
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="html">
+                                        <label for="html">Internal</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" id="css">
+                                        <label for="css">External</label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flush-headingThree">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Owner
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="tabs">
+                                    <input type="radio" name="tabs" id="tabone" checked="checked">
+                                    <label for="tabone">Users</label>
+                                    <div class="tab">
+                                        <ul type="none" class="p-0">
+                                            <li class="d-flex align-items-center">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <input type="search" placeholder="Search" class="form-control">
+                                            </li>
+                                        </ul>
+                                        <div class="tabone-content">
+                                            <h6>Project User</h6>
+                                            <ul type="none" class="p-0">
+                                                <li>
+                                                    <img src="assets/img/user-thumbnail.png" alt="" class="img-fluid">
+                                                    <h5>Tom Harry</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/profile3.jpg" alt="">
+                                                    <h5>Harry Potter</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/user-thumbnail.png" alt="" class="img-fluid">
+                                                    <h5>Tom Harry</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/profile3.jpg" alt="">
+                                                    <h5>Harry Potter</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/user-thumbnail.png" alt="" class="img-fluid">
+                                                    <h5>Tom Harry</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/profile3.jpg" alt="">
+                                                    <h5>Harry Potter</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/user-thumbnail.png" alt="" class="img-fluid">
+                                                    <h5>Tom Harry</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/profile3.jpg" alt="">
+                                                    <h5>Harry Potter</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/user-thumbnail.png" alt="" class="img-fluid">
+                                                    <h5>Tom Harry</h5>
+                                                </li>
+                                                <li>
+                                                    <img src="assets/img/profile3.jpg" alt="">
+                                                    <h5>Harry Potter</h5>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <input type="radio" name="tabs" id="tabtwo">
+                                    <label for="tabtwo">Teams</label>
+                                    <div class="tab">
+                                        <ul type="none" class="p-0">
+                                            <li class="d-flex align-items-center">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <input type="search" placeholder="Search" class="form-control">
+                                            </li>
+                                        </ul>
+                                        <div class="tabtwo-content d-flex gap-2">
+                                            <input type="radio" id="radio">
+                                            <label class="border-0" for="">ZSK</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flusFour">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Tages
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="divnot d-block" style="cursor: no-drop;">
+                                    <span style="color: #848484;">Not Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flusFive">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                aria-controls="flush-collapseFive">
+                                Start Date
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="accordi_date">
+                                    <input type="text" placeholder="${Today}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flusSix">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSix" aria-expanded="false"
+                                aria-controls="flush-collapseSix">
+                                End Date
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="accordi_date">
+                                    <input type="text" placeholder="${Today}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flusSeven">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                                aria-controls="flush-collapseSeven">
+                                Completed Date
+                            </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="accordi_date">
+                                    <input type="text" placeholder="${Today}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header position-relative" id="flusEight">
+                            <button class="accordion-button collapsed text-dark" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseEight" aria-expanded="false"
+                                aria-controls="flush-collapseEight">
+                                Status
+                            </button>
+                        </h2>
+                        <div id="flush-collapseEight" class="accordion-collapse collapse text-dark"
+                            aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="status">
+                                    <ul type="none" class="p-0">
+                                        <li class="d-flex align-items-center">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <input type="search" placeholder="Search" class="form-control">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="statusdata">
+                                    <ul type="none" class="p-0">
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="active">
+                                                <label for="active">Active</label>
+                                            </form>
+                                            <div class="livestatus active"></div>
+                                        </li>
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="progress">
+                                                <label for="progress">In Progress</label>
+                                            </form>
+                                            <div class="livestatus progress"></div>
+                                        </li>
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="reopen">
+                                                <label for="reopen">Reopen</label>
+                                            </form>
+                                            <div class="livestatus active"></div>
+                                        </li>
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="arechived">
+                                                <label for="arechived">Arechived</label>
+                                            </form>
+                                            <div class="livestatus arechived"></div>
+                                        </li>
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="hold">
+                                                <label for="hold">On Hold</label>
+                                            </form>
+                                            <div class="livestatus onhold"></div>
+                                        </li>
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="deferred">
+                                                <label for="deferred">Deferred</label>
+                                            </form>
+                                            <div class="livestatus Deferred"></div>
+                                        </li>
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="Cancelled">
+                                                <label for="Cancelled">Cancelled</label>
+                                            </form>
+                                            <div class="livestatus Cancelled"></div>
+                                        </li>
+                                        <li>
+                                            <form action="">
+                                                <input type="checkbox" id="Completed">
+                                                <label for="Completed">Completed</label>
+                                            </form>
+                                            <div class="livestatus completed"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="choose d-flex gap-4 px-3 pb-3">
+                <div class="divany">
+                    <input type="radio" id="any" name="divany">
+                    <label for="any">Any of these</label>
+                </div>
+                <div class="divany">
+                    <input type="radio" id="all" name="divany">
+                    <label for="all">All of these</label>
+                </div>
+            </div>
+            <div class="canvasbtn d-flex align-items-center gap-2 py-2 px-3">
+                <div class="findbtn">
+                    <button class="btn">Find</button>
+                </div>
+                <div class="closebtn">
+                    <button type="button" class="btn text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Profile-offcanvas -->
+    <div class="offcanvas offcanvas-end profileoffcanvas" tabindex="-1" id="offcanvasRight2"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header bg-none">
+            <div class="profile d-flex gap-3 text-start">
+                <div class="leftsideaction">
+                    <img src="assets/img/user-thumbnail.png" alt="">
+                </div>
+                <div class="rightsideaction text-white">
+                    <h5 class="name">Lokesh Sahu</h5>
+                    <h6 class="text-secondary">lokesh.sahu@mobzway.in</h6>
+                    <span class="userid text-secondary">User ID : 808028257</span>
+                    <div class="signout pt-2">
+                        <span><a href="#">Admin Panel</a></span>
+                        <span class="text-white px-3"><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Sign
+                                Out</a></span>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="closebtn2 text-reset" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- <button class="btn darkmodebtn" onclick="myFunction4()">Toggle dark mode</button> -->
+        </div>
+    </div>
+    <!-- Notification-offcanvas -->
+    <div class="offcanvas offcanvas-end notification" tabindex="-1" id="offcanvasRight3"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header notification-hdr bg-white py-3">
+            <div id="offcanvasRightLabel">
+                <div class="notifibar position-relative">
+                    <span>All Notifications
+                        <i class="fa-sharp fa-solid fa-caret-down"></i>
+                    </span>
+                    <div class="drowpdown">
+                        <ul type="none" class="p-0">
+                            <li>All</li>
+                            <li>Unread</li>
+                            <li>Flagged</li>
+                            <li>@Mention</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="notifisetting">
+                <i class="fa-solid fa-gear"></i>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+        </div>
+    </div>
+    <!-- Search modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa-solid fa-magnifying-glass" style="padding-right: 10px; padding-top: 5px;"></i>
+                    <h5 class="modal-title" id="exampleModalLabel"><input type="search" name="" id=""
+                            placeholder="Type here and press ENTER to start your search"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(".sidebar-page li").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+        $(".menubtn").click(function () {
+            $(".sidebar").toggleClass("sidebar-close");
+            $(this).toggleClass("menubtn-open");
+        });
+    </script>
+    <!-- DOTS DROPDOWN -->
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- HEADER PANEL PLUS DROPDOWN -->
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction2() {
+            document.getElementById("myDropdown2").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <!--SELECT-->
+    <script>
+        $(document).ready(function () {
+            $('#search').select2({
+                placeholder: "select a search",
+                // allowClear: true
+            });
+        });
+    </script> 
+    <!--POPUP-->
+    <script>
+        function myFunctions() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+    <script>
+        function myFunction4() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+
+</html>

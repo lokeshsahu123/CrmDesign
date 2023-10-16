@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/Fontawsome/css/all.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-----Select2 CSS/JS------->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+
+<body>
+    <!--------------------Sidebar Left-------------------->
+    <div class="sidebar position-fixed top-0 bottom-0 start-0">
+        <div class="w-100">
+            <ul class="w-100 d-table sidebar-page">
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="d-block">Projects</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <img src="assets/img/growth.png" />
+                        <span class="d-block">Analytics</span></a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-100 position-absolute bottom-0">
+            <ul class="w-100 d-table sidebar-page">
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <i class="fa-solid fa-check"></i>
+                        <span class="d-block">Recent Items</span></a>
+                </li>
+                <li class="w-100">
+                    <a href="#" class="d-block">
+                        <img src="assets/img/growth.png" />
+                        <span class="d-block">Favorites</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--------------------Sidebar Left End!-------------------->
+    <!-- Header Panel -->
+    <div class="headerpanel w-100 d-flex justify-content-between position-fixed top-0 start-0">
+        <div class="d-flex align-items-center">
+            <button class="btn menubtn text-center">
+                <span></span>
+                <span class="position-relative"></span>
+                <span class="mb-0"></span>
+            </button>
+            <ul class="nav headernavbar">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Feed</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Discuss</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Report</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Calendar</a>
+                </li>
+                <li class="hidden">
+                    <a href="#">Projects</a>
+                </li>
+                <li class="hidden">
+                    <a href="#" class="d-sm-none ">Work Overview</a>
+                </li>
+                <li class="d-lg-none d-md-block">
+                    <button class="btn" onclick="myFunctions()"><i class="fa-solid fa-ellipsis text-white"></i></button>
+                    <div id="myDIV">
+                        <a href="#">Feed</a>
+                        <a href="#">Discuss</a>
+                        <a href="#">Report</a>
+                        <a href="#">Calendar</a>
+                        <a href="#">Calendar</a>
+                        <a href="#">Projects</a>
+                        <a href="#">Work Overview</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">PRD:MGP2.0</a>
+                </li>
+            </ul>
+        </div>
+        <div class="">
+            <ul class="header-icon p-0 d-flex align-items-center">
+                <li>
+                    <button type="button" class="btn search-glass text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+                <li>
+                    <i class="fa-solid fa-plus"></i>
+                </li>
+                <li>
+                    <i class="fa-solid fa-clock"></i>
+                </li>
+                <li class="position-relative">
+                    <i class="fa-sharp fa-solid fa-bell"></i>
+                    <span class="position-absolute notifications-count">18</span>
+                </li>
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                </li>
+                <li class="m-0">
+                    <img class="userimg rounded-pill" src="assets/img/user-thumbnail.png" alt="User Thumbnail" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Header Panel End! -->
+    <!-- Main-panel -->
+    <div class="container-fluid main-panel">
+        <div class="ds-container">
+            <div class="taskbar">
+                <div class="tasknavbar">
+                    <ul type="none" class="nav">
+                        <li class="list-item active"><a href="#">Dashboard</a></li>
+                        <li class="list-item active"><a href="#">Task</a></li>
+                        <li class="list-item active"><a href="index.html">Bugs</a></li>
+                        <li class="list-item active"><a href="displaymilestone.html">Milestone</a></li>
+                        <li class="list-item active"><a href="displaydocuments.html">Documents</a></li>
+                        <li class="list-item active"><a href="#">Timesheet</a></li>
+                        <li class="list-item active"><a href="#">Fourms</a></li>
+                        <li class="list-item active"><a href="#">Pages</a></li>
+                        <li>
+                            <a href="#" class="ellipsis"><i class="fa-solid fa-ellipsis"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="documentsempty">
+                <div class="documents-img" style="margin-right: 50px;">
+                    <img src="assets/img/docs.png" alt="">
+                </div>
+                <div class="documents-content">
+                    <h5><b>No team folders available.</b></h5>
+                    <p style="font-size: 18px; color: #a09f9f;">Contact portal Admin to associate folder</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <i class="fa-solid fa-magnifying-glass" style="padding-right: 10px; padding-top: 5px;"></i>
+                    <h5 class="modal-title" id="exampleModalLabel"><input type="search" name="" id="" placeholder="Type here and press ENTER to start your search"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(".sidebar-page li").click(function () {
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+        $(".menubtn").click(function () {
+            $(".sidebar").toggleClass("sidebar-close");
+            $(this).toggleClass("menubtn-open");
+        });
+    </script>
+    
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <!--All Open  -->
+    <!-- <script>
+        function myFunctions() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script> -->
+
+    <!--SELECT-->
+    <script>
+        $(document).ready(function () {
+            $('#search').select2({
+                placeholder: "select a search",
+                // allowClear: true
+            });
+        });
+    </script>
+
+    <!--POPUP-->
+    <script>
+        function myFunctions() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

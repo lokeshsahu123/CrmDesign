@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Table</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/Fontawsome/css/all.min.css" />
+</head>
+
+<body>
+  <!-- ------------------Sidebar Left------------------ -->
+
+  <div class="sidebar position-fixed top-0 bottom-0 start-0">
+    <div class="w-100">
+      <ul class="w-100 d-table sidebar-page">
+        <li class="w-100">
+          <a href="#" class="d-block">
+            <i class="fa-solid fa-check"></i>
+            <span class="d-block">Projects</span></a>
+        </li>
+        <li class="w-100">
+          <a href="#" class="d-block">
+            <img src="assets/img/growth.png" />
+            <span class="d-block">Analytics</span></a>
+        </li>
+      </ul>
+    </div>
+    <div class="w-100 position-absolute bottom-0">
+      <ul class="w-100 d-table sidebar-page">
+        <li class="w-100">
+          <a href="#" class="d-block">
+            <i class="fa-solid fa-check"></i>
+            <span class="d-block">Recent Items</span></a>
+        </li>
+        <li class="w-100">
+          <a href="#" class="d-block">
+            <img src="assets/img/growth.png"/>
+            <span class="d-block">Favorites</span></a>           
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--------------------Sidebar Left End!-------------------->
+
+  <!-- Header Panel -->
+  <div class="headerpanel w-100 d-flex justify-content-between position-fixed top-0 start-0">
+    <div class="d-flex align-items-center">
+      <button class="btn menubtn text-center">
+        <span></span>
+        <span class="position-relative"></span>
+        <span class="mb-0"></span>
+      </button>
+      <ul class="nav headernavbar">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Feed</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Discuss</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Report</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Calendar</a>
+        </li>
+        <li class="hidden">
+          <a href="#">Projects</a>
+        </li>
+        <li class="hidden">
+          <a href="#" class="d-sm-none ">Work Overview</a>
+        </li>
+        <li class="d-lg-none d-md-block">
+          <button class="btn" onclick="myFunctions()"><i class="fa-solid fa-ellipsis text-white"></i></button>
+          <div id="myDIV">
+            <a href="#">Feed</a>
+            <a href="#">Discuss</a>
+            <a href="#">Report</a>
+            <a href="#">Calendar</a>
+            <a href="#">Calendar</a>
+            <a href="#">Projects</a>
+            <a href="#">Work Overview</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">PRD:MGP2.0</a>
+        </li>
+      </ul>
+    </div>
+    <div class="">
+      <ul class="header-icon p-0 d-flex align-items-center">
+        <li>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </li>
+        <li>
+          <i class="fa-solid fa-plus"></i>
+        </li>
+        <li>
+          <i class="fa-solid fa-clock"></i>
+        </li>
+        <li class="position-relative">
+          <i class="fa-sharp fa-solid fa-bell"></i>
+          <span class="position-absolute notifications-count">18</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-gear"></i>
+        </li>
+        <li class="m-0">
+          <img class="userimg rounded-pill" src="assets/img/user-thumbnail.png" alt="User Thumbnail" />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Header Panel End! -->
+  <!-- Main-panel -->
+  <div class="container-fluid main-panel">
+    <div class="ds-container">
+      <div class="taskbar">
+        <div class="tasknavbar">
+          <ul type="none" class="nav">
+            <li class="list-item"><a href="#">Dashboard</a></li>
+            <li class="list-item"><a href="#">Task</a></li>
+            <li class="list-item"><a href="index.html">Bugs</a></li>
+            <li class="list-item"><a href="displaymilestone.html">Milestone</a></li>
+            <li class="list-item"><a href="displaydocuments.html">Documents</a></li>
+            <li class="list-item"><a href="#">Timesheet</a></li>
+            <li class="list-item"><a href="#">Fourms</a></li>
+            <li class="list-item"><a href="#">Pages</a></li>
+            <li>
+              <a href="#" class="ellipsis"><i class="fa-solid fa-ellipsis"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="das-list d-flex justify-content-between align-items-center px-2">
+      <div class="right-action">
+        <div class="right-action-text">
+          <span>All open <i class="fa-sharp fa-solid fa-caret-down"></i></span>
+          <div class="drowp">
+            <ul type="none" class="p-1">
+              <li>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="search">
+              </li>
+              <li>
+                <button class="accordion d-flex justify-content-between align-items-center">
+                  <p class="text-dark"><b>Predefind Views</b></p>
+                  <p class="text-dark"><i class="fa-sharp fa-solid fa-caret-down"></i></p>
+                </button>
+                <div class="panel">
+                  <p class="accordion-text">All Milestone</p>
+                  <p class="accordion-text">All Milestone</p>
+                  <p class="accordion-text">All Milestone</p>
+                  <p class="accordion-text">All Milestone</p>
+                  <p class="accordion-text">All Milestone</p>
+                </div>
+              </li>
+              <li>
+                <button class="accordion d-flex justify-content-between align-items-center">
+                  <p class="text-dark"><b>Predefind Views</b></p>
+                  <p class="text-dark"><i class="fa-sharp fa-solid fa-caret-down"></i></p>
+                </button>
+                <div class="panel">
+                  <p>Coming Soon</p>
+                  <p>Coming Soon</p>
+                  <p>Coming Soon</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="left-action">
+        <div class="left-action-text">
+          <ul type="none" class="d-flex align-items-center justify-content-evenly gap-3" style="margin-right: 50px;">
+            <li>
+              <i class="fa-solid fa-bars"></i>
+              <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn btn">Plain<i class="fa-sharp fa-solid fa-caret-down"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#"><i class="fa-solid fa-bars-staggered fa-rotate-90"></i> Plain</a>
+                  <a href="#"><i class="fa-solid fa-bars"></i> Classic</a>
+                  <a href="#"><i class="fa-solid fa-bars-staggered fa-rotate-90"></i> Kanban</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <button class="btn submit-bugs">Submit Bugs</button>
+            </li>
+            <li class="das-list-icon">
+              <i class="fa-solid fa-filter  mx-2"></i>
+              <i class="fa-solid fa-ellipsis"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Table-start -->
+    <div class="das-table">
+      <div class="das-table-hdr">
+        <table>
+          <thead class="table-header border-bottom">
+            <tr class="mslinehdr">
+              <th class="mile-txt" style="width: 150px; min-width: 150px; max-width: 150px">
+                <i class="fa-solid fa-gear"></i>
+                <span class="mx-2">Bugs</span>
+              </th>
+              <th class="th-text">
+                <span class="text-row"></span>
+              </th>
+              <th class="th-text">
+                <span class="text-row">Reporter</span>
+              </th>
+              <th class="th-text">
+                <span class="text-row">Create</span>
+              </th>
+              <th class="th-text">
+                <span class="text-row">Status</span>
+              </th>
+              <th class="th-text">
+                <span class="text-row">Tages</span>
+              </th>
+              <th class="th-text">
+                <span class="text-row">Assosiate</span>
+              </th>
+              <th class="th-text">
+                <span class="text-row">Assignment</span>
+              </th>
+              <th class="th-text">
+                <span class="text-row">End-date</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="thbody">
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn">Assigned(Response)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn res">Resolved(Tooooooo)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn">Assigned(Response)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn res">Resolved(Tooooooo)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn">Assigned(Response)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn res">Resolved(Tooooooo)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn">Assigned(Response)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn res">Resolved(Tooooooo)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn">Assigned(Response)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+            <tr>
+              <td> <span class="light-text"><input type="checkbox">&nbsp;&nbsp; A902-179</span> streamer app-uploaded
+                video size not show proper in mb</td>
+              <td></td>
+              <td class="Reporter-text">
+                <span>Mohit verma</span>
+              </td>
+              <td class="date-start">
+                <span>26-03-2023</span>
+              </td>
+              <td class="status-text">
+                <button class="status-btn res">Resolved(Tooooooo)</button>
+              </td>
+              <td class="tages-text">
+                <span>-</span>
+              </td>
+              <td class="Assote-text">
+                <span>Baricata</span>
+              </td>
+              <td class="assign-text">
+                <span>Ritanshu Patwa</span>
+              </td>
+              <td class="end-date">
+                <span>30-04-2023</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Table-End -->
+  </div>
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+
+  <script>
+    $(".sidebar-page li").click(function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+    $(".menubtn").click(function () {
+      $(".sidebar").toggleClass("sidebar-close");
+      $(this).toggleClass("menubtn-open");
+    });
+  </script>
+
+  <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+
+  <script>
+    function myFunctions() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
+</body>
+
+</html>
